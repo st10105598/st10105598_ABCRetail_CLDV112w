@@ -1,0 +1,16 @@
+﻿@model List<st10105598_ABCRetail_CLDV112w.Models.CustomerEntity>
+
+<h2>Customer Profiles</h2>
+<table border="1" cellpadding="5" cellspacing="0">
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+    </tr>
+    @foreach (var customer in Model)
+    {
+        <tr>
+            <td>@customer.Name</td>
+            <td>@customer.Email</td>
+        </tr>
+    }
+</table>

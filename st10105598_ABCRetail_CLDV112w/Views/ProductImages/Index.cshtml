@@ -1,0 +1,22 @@
+﻿@*
+    For more information on enabling MVC for empty projects,
+    visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@model List<string>
+
+<h2>Uploaded Product Images</h2>
+
+@if (Model == null || !Model.Any())
+{
+    <p>No images uploaded yet.</p>
+}
+else
+{
+    <div class="image-gallery">
+        @foreach (var imageUrl in Model)
+        {
+            <img src="@imageUrl" alt="Product Image" style="max-width: 200px; margin: 5px;" />
+        }
+    </div>
+}
